@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Study Hall</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">The Study Hall</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item animated-fade-in"><a class="nav-link" href="#Welcome">Home</a></li>
+                    <li class="nav-item animated-fade-in"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item animated-fade-in"><a class="nav-link" href="#history">History</a></li>
+                    <li class="nav-item animated-fade-in"><a class="nav-link" href="#comments">Quotes</a></li>
+                    <li class="nav-item animated-fade-in"><a class="nav-link" href="#Feedback">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <style>
+            #welcome-section {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                /* full viewport height for hero */
+                overflow: hidden;
+                background-color: #007bff;
+                /* fallback color */
+                color: white;
+            }
+
+            #welcome-section video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+                z-index: 0;
+                opacity: 0.5;
+                /* dim video */
+            }
+
+            #welcome-section .content {
+                position: relative;
+                z-index: 1;
+                /* on top of video */
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .custom-title {
+                font-size: 6rem;
+                /* overrides display-2 */
+                font-weight: bold;
+            }
+        </style>
+
+        <section id="welcome-section">
+            <video autoplay loop muted>
+                <source src="tech.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <h1 class="display-1">Welcome to The Study Hall</h1>
+                <p class="lead fs-2">Empower learning, connect knowledge, and inspire future leaders.</p>
+                <a href="#about" class="btn btn-light btn-lg mt-3">Learn More</a>
+            </div>
+        </section>
+
+
+        <!-- Navigation / Quick Links -->
+        <section class="py-4 text-center">
+            <ol class="list-inline">
+                <li class="list-inline-item mx-3"><a href="students.html" class="btn btn-primary btn-lg">Students</a>
+                </li>
+                <li class="list-inline-item mx-3"><a href="subjects.html" class="btn btn-success btn-lg">Subjects</a>
+                </li>
+                <li class="list-inline-item mx-3"><a href="schools.html" class="btn btn-warning btn-lg">Schools</a></li>
+            </ol>
+        </section>
+
+        <!-- About / Mission / Vision -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">About Us</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://picsum.photos/seed/1/400/200" class="card-img-top" alt="Learning">
+                            <div class="card-body">
+                                <h5 class="card-title">Learning</h5>
+                                <p class="card-text">Explore subjects and courses designed for every student.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://picsum.photos/seed/2/400/200" class="card-img-top" alt="Mission">
+                            <div class="card-body">
+                                <h5 class="card-title">Mission</h5>
+                                <p class="card-text">To empower students and educators through centralized knowledge
+                                    management.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://picsum.photos/seed/3/400/200" class="card-img-top" alt="Vision">
+                            <div class="card-body">
+                                <h5 class="card-title">Vision</h5>
+                                <p class="card-text">A world where learning is connected, engaging, and effortless.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History -->
+        <section id="history" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Our History</h2>
+                <p class="text-center">The Study Hall started in 2025 as a student-focused platform to centralize
+                    learning resources, connect schools, and simplify subject management. Over time, it has become a hub
+                    for students, educators, and institutions to collaborate and thrive.</p>
+            </div>
+        </section>
+
+<section id="comments" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Famous Quotes</h2>
+        <div class="accordion" id="quotesAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#quoteOne" aria-expanded="true" aria-controls="quoteOne">
+                        Albert Einstein
+                    </button>
+                </h2>
+                <div id="quoteOne" class="accordion-collapse collapse show" data-bs-parent="#quotesAccordion">
+                    <div class="accordion-body">
+                        "Education is not the learning of facts, but the training of the mind to think."<br>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Albert_Einstein_1947.jpg/982px-Albert_Einstein_1947.jpg" 
+                            alt="Albert Einstein portrait" class="img-fluid mt-2" style="max-height: 200px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#quoteTwo" aria-expanded="false" aria-controls="quoteTwo">
+                        Nelson Mandela
+                    </button>
+                </h2>
+                <div id="quoteTwo" class="accordion-collapse collapse" data-bs-parent="#quotesAccordion">
+                    <div class="accordion-body">
+                        "Education is the most powerful weapon which you can use to change the world."<br>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Nelson_Mandela_1994_%282%29.jpg" 
+                            alt="Nelson Mandela portrait" class="img-fluid mt-2" style="max-height: 200px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#quoteThree" aria-expanded="false" aria-controls="quoteThree">
+                        Aristotle
+                    </button>
+                </h2>
+                <div id="quoteThree" class="accordion-collapse collapse" data-bs-parent="#quotesAccordion">
+                    <div class="accordion-body">
+                        "The roots of education are bitter, but the fruit is sweet."<br>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/960px-Aristotle_Altemps_Inv8575.jpg" 
+                            alt="Aristotle portrait" class="img-fluid mt-2" style="max-height: 200px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#quoteFour" aria-expanded="false" aria-controls="quoteFour">
+                        Mahatma Gandhi
+                    </button>
+                </h2>
+                <div id="quoteFour" class="accordion-collapse collapse" data-bs-parent="#quotesAccordion">
+                    <div class="accordion-body">
+                        "Live as if you were to die tomorrow. Learn as if you were to live forever"<br>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg/961px-Mahatma-Gandhi%2C_studio%2C_1931.jpg" 
+                            alt="Mahatma Gandhi portrait" class="img-fluid mt-2" style="max-height: 200px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- Feedback Form -->
+        <section id="Feedback" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Feedback</h2>
+                <h5 class="text-center mb-4">Do you have any suggestions or comments? We'd love to hear from you!</h5>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form class="p-3 bg-white rounded shadow-sm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@email.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="comment" class="form-label">Your Comment</label>
+                                <textarea class="form-control" id="comment" placeholder="Write your comment"
+                                    rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-wchite text-center py-3">
+        &copy; 2025 Metaphorce | Inspired by Campus Co
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
