@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js\schools.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <style>
+                body {
+                    background-color: #f8f9fa;
+                    scroll-behavior: smooth;
+                }
+
+                section {
+                    padding: 40px;
+                    margin-top: 20px;
+                }
+
+                h1 {
+                    color: #0d6efd;
+                    margin-bottom: 20px;
+                }
+
+                footer {
+                    background-color: #212529;
+                    color: white;
+                    padding: 15px;
+                    margin-top: 40px;
+                }
+
+                table {
+                    width: 100%;
+                }
+            </style>
+
+            <nav class="navbar" style="background-color: #7dc1f2;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <h1>Schools Menu</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#introduction">Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#search">Search</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#schools">Schools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#new">New</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="introduction" class="py-5 bg-white">
+            <div class="container">
+                <h1 class="text-center mb-5">Introduction</h1>
+                <p>Step into the future of education with the Metaphorce School Network Platform. This dynamic
+                    environment is engineered to seamlessly connect and empower our member institutions, transforming
+                    collective insight into action and accelerating educational growth across the entire network. Start
+                    your journey of discovery and collaboration today</p>
+                <!-- Card 1 -->
+                <div class="card mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-5">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Staples_High_School%2C_Westport%2C_CT.jpg"
+                                class="img-fluid rounded-start" alt="Staples High School in Westport, CT">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Discover, Connect, and Grow: The Metaphorce School
+                                    Network Platform</h5>
+                                <p class="card-text text-muted">
+                                    The Metaphorce School Network Platform is the centralized digital hub for all
+                                    institutions, educators,
+                                    and administrators within the Metaphorce educational ecosystem. It functions as a
+                                    comprehensive management
+                                    tool, discovery portal, and collaborative space for shared excellence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card mb-4">
+                    <div class="row align-items-center flex-row-reverse">
+                        <div class="col-md-5">
+                            <img src="https://www.stephens-scown.co.uk/app/uploads/2019/05/GettyImages-1008096704-1024x681.jpg"
+                                class="img-fluid rounded-end" alt="Collaborative Resource Hub">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Collaborative Resource Hub</h5>
+                                <p class="card-text text-muted">
+                                    Beyond a directory, the platform facilitates <strong>interaction and
+                                        resource-sharing</strong>.
+                                    Administrators and teachers can access a secure library of best practices,
+                                    curriculum guides, and
+                                    professional development materials, turning the network into a hub of collective
+                                    innovation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-5">
+                            <img src="https://smeda.org/images/joomlart/blog/business%20grow.jpg"
+                                class="img-fluid rounded-start" alt="Data and Performance Insight">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Data & Performance Insight</h5>
+                                <p class="card-text text-muted">
+                                    The platform centralizes institutional data, offering network administrators a
+                                    powerful dashboard to
+                                    monitor <strong>performance trends, compliance metrics, and operational
+                                        health</strong> across all schools.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#new" class="btn btn-primary btn-lg">Register a new school</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Search Section -->
+        <section id="search" class="text-center bg-light py-5">
+            <div class="container">
+                <h1 class="mb-4">Browse Schools</h1>
+                <p class="text-start">Begin your exploration here! Browse the full directory of schools in the
+                    Metaphorce network to discover their unique academic programs, locations, and institutional
+                    profiles.</p>
+                <form class="d-flex justify-content-center">
+                    <input type="search" class="form-control w-50 me-2" placeholder="Enter a school name..." id="school_name">
+                    <button class="btn btn-primary" onclick="search()">
+                        <i class="bi bi-search"></i> Search
+                    </button><br>
+                    
+                </form>
+                <p id="school_found"></p>
+                <div class="mt-5">
+                    <img src="https://thumbs.dreamstime.com/b/open-book-magnifying-glass-library-books-research-knowledge-open-book-magnifying-glass-stacked-books-table-406543182.jpg"
+                        class="img-fluid rounded shadow-lg" alt="Browse Schools Illustration" width="600">
+                </div>
+            </div>
+        </section>
+
+        <section id="list">
+            <h1 class="text-center">Registered Schools</h1>
+            <p>Welcome to the official directory of Registered Schools within the Metaphorce network. This section
+                provides detailed profiles and essential administrative data for every institution currently active and
+                integrated into our collaborative educational ecosystem.</p>
+            <div class="mt-5 text-center">
+                <img src="https://blog.degruyter.com/wp-content/uploads/2018/07/degruyter-book-archive-header-library.jpg"
+                    class="img-fluid rounded " style="width: 80%;">
+            </div>
+
+            <section id="list" class="container bg-white rounded shadow-sm">
+                <div id="table-container" class="table table-striped mt-3" ></div>
+            
+            </section>
+        </section>
+
+        <section id="gallery" class="py-5 bg-white">
+            <div class="container">
+                <h1 class="text-center mb-5">Our Schools Gallery</h1>
+                <p>Explore the diversity and vibrant campuses of the Metaphorce network. This gallery offers a visual
+                    tour of the facilities, architecture, and learning environments that define our member institutions.
+                </p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden" style="transition: transform 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <div class="ratio ratio-4x3">
+                                <img src="https://library.yale.edu/sites/default/files/autumn_library.jpg"
+                                    class="img-fluid rounded" alt="Yale Library">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Yale Library</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden" style="transition: transform 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <div class="ratio ratio-4x3">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKeGOjWNppV1aB8afhKory_JGSyCxEAebHgw&s"
+                                    class="img-fluid rounded" alt="Modern School">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Harvard University</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden" style="transition: transform 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <div class="ratio ratio-4x3">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO3WRrOz7fSodIP8rQe_2e0VX66OrNPDKmFw&s"
+                                    class="img-fluid rounded" alt="Classic Campus">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Stanford University</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden" style="transition: transform 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <div class="ratio ratio-4x3">
+                                <img src="https://cdn2.telediario.mx/uploads/media/2021/12/22/plantel-del-ipn-archivo.jpg"
+                                    class="img-fluid rounded" alt="IPN Campus">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">IPN Campus</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden" style="transition: transform 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <div class="ratio ratio-4x3">
+                                <img src="https://design.ncsu.edu/wp-content/uploads/2025/02/Biblioteca_central_de_la_UNAM.jpg"
+                                    class="img-fluid rounded" alt="University Building">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Universidad Autonoma de México</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden" style="transition: transform 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <div class="ratio ratio-4x3">
+                                <img src="https://www.liderempresarial.com/wp-content/uploads/2022/11/Universidad-de-Guanajuato-1.jpg"
+                                    class="img-fluid rounded" alt="Universidad de Guanajuato">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Universidad de Guanajuato</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="new" class="container bg-light p-5 rounded shadow-sm">
+            <h1>Register a New School</h1>
+            <div class="text-center mb-3">
+                <img src="https://tapinto-production.s3.amazonaws.com/uploads/photos/sc/best_crop_5635aca65d015063976c_mini_magick20230531-10963-1xvfgs3.jpg?id=4838752?v=7539d5df7f6d1ed569ee"
+                    class="img-fluid rounded shadow-sm" width="500">
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-building"></i> Name</label>
+                    <input type="text" class="form-control" placeholder="School name" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-geo-alt"></i> Address</label>
+                    <input type="text" class="form-control" placeholder="School address" id="address" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-pencil"></i> Description</label>
+                    <textarea class="form-control" rows="3" placeholder="Short description" id="description" required></textarea>
+                </div>
+                <button class="btn btn-success w-100" onclick="add()"><i class="bi bi-save" ></i> Save</button>
+            </form>
+        </section>
+
+        <footer class="bg-dark text-wchite text-center py-3">
+            &copy; 2025 Metaphorce | Inspired by Campus Co
+        </footer>
+    </main>
+
+</body>
+
+</html>
