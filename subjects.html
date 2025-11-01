@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="js/subjects.js" defer></script>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-left: 10px;
+      color: #003366;
+    }
+
+    .navbar {
+      padding: 10px 20px;
+    }
+
+    #subjects .card {
+      transition: transform 0.3s;
+    }
+
+    #subjects .card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navbar" style="background-color: #7dc1f2;">
+        <a class="navbar-brand" href="#">
+          <h1>Subjects Menu</h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+          <div class="navbar-toggler-icon"></div>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li class="nav-item"><a href="#search" class="nav-link">Search</a></li>
+            <li class="nav-item"><a href="#subjects" class="nav-link">Subjects</a></li>
+            <li class="nav-item"><a href="#new" class="nav-link">New</a></li>
+          </ul>
+        </div>
+
+      </nav>
+    </header>
+
+    <!-- Hero / Introduction Section -->
+    <section id="introduction" class="text-center bg-light py-5">
+      <div class="container">
+        <h1 class="mb-4">Welcome to the Subjects Portal</h1>
+        <p class="lead w-75 mx-auto">
+          This portal helps you explore, manage, and add new subjects to our academic system.
+          Whether you’re a student, teacher, or administrator, you can easily search, learn, and contribute to the
+          growing database of knowledge areas.
+        </p>
+        <img
+          src="https://cdn.sanity.io/images/i2z87pbo/production/73a34e119777535eb89ecdfd07ecc10f9efa0ecd-1440x1079.jpg"
+          alt="Books" class="img-fluid w-50 mt-4">
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="text-center bg-white py-5">
+      <div class="container">
+        <h1 class="mb-4">Browse Subjects</h1>
+        <img
+          src="https://assets.nautil.us/sites/3/nautilus/HPwc4GpF-Hodgkinson_HERO.png?auto=compress&fm=png&ixlib=php-3.3.1"
+          alt="Search Illustration" class="img-fluid w-75 mb-4 rounded">
+        <form class="d-flex justify-content-center mb-3">
+          <input class="form-control w-50 me-2" placeholder="Enter a subject name..." id="search_subject" required>
+          <button class="btn btn-primary" onclick="search()"><i class="bi bi-search"></i> Search</button>
+        </form>
+        <div id="subject_found"></div>
+        <p class="text-muted">Tip: Try searching for “Mathematics”, “Biology”, or “History”.</p>
+      </div>
+    </section>
+
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="text-center bg-light py-5">
+      <div class="container">
+        <h1 class="mb-4">All Subjects</h1>
+
+        <!-- Section image -->
+        <img
+          src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/sites/www.builtin.com/files/2024-09/programming-languages.jpg"
+          alt="Programming Languages" class="img-fluid w-75 rounded mb-4 shadow-sm">
+
+        <!-- Subject Cards -->
+        <div class="row g-4 text-center" id="subjectsList"></div>
+
+        <!-- 👇 Details appear here dynamically -->
+        <div id="subjectDetails" class="container mt-4"></div>
+
+        <!-- Toast Container -->
+        <div class="position-fixed top-0 end-0 p-3" style="z-index: 1100">
+          <div id="subjectToast" class="toast align-items-center text-bg-primary border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body" id="toastBody">
+                <!-- Message will go here -->
+              </div>
+              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+
+    <!-- New Subject Section -->
+    <section id="new" class="container bg-white p-5 rounded shadow-sm my-5">
+      <h1 class="text-center mb-4">Create New Subject</h1>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="lead">
+            Add a new subject to the portal by providing its name and a short description.
+            Help us expand our learning database and inspire future learners!
+          </p>
+          <form class="d-flex flex-column align-items-start mt-4">
+            <input class="form-control mb-3" placeholder="Subject Name" id="subject_name" required>
+            <textarea class="form-control mb-3" rows="4" id="description" placeholder="Subject Description"
+              required></textarea>
+            <button class="btn btn-success" onclick="add()"><i class="bi bi-plus-circle"></i> Create Subject</button>
+          </form>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="https://s39613.pcdn.co/wp-content/uploads/2021/11/day-picture-id1163588010.jpg" alt="New Subject"
+            class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      &copy; 2025 Metaphorce | Inspired by Campus Co 
+    </footer>
+  </main>
+</body>
+
+</html>
