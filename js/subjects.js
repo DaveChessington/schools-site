@@ -1,3 +1,4 @@
+api_gateway="https://1zow4wws27.execute-api.us-east-1.amazonaws.com"
 
 async function add() {
     let mensaje = ""; // Declare 'mensaje' outside the try block
@@ -6,7 +7,7 @@ async function add() {
         debugger;
         const name = document.getElementById('subject_name').value;
         const description = document.getElementById('description').value;
-        const response = await fetch('https://4g219ev4sc.execute-api.us-east-1.amazonaws.com/dev/subjects', {
+        const response = await fetch(`${api_gateway}/dev/subjects`, {
                 method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json',
@@ -35,7 +36,7 @@ async function search() {
             return;
         }
         debugger;
-        const response = await fetch('https://4g219ev4sc.execute-api.us-east-1.amazonaws.com/dev/subjects/subject', {
+        const response = await fetch(`${api_gateway}/dev/subjects/subject`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +72,7 @@ async function search() {
 async function list() {
   let mensaje = "";
   try {
-    const response = await fetch('https://4g219ev4sc.execute-api.us-east-1.amazonaws.com/dev/subjects');
+    const response = await fetch(`${api_gateway}/dev/subjects`);
     const data = await response.json();
 
     // Parse API Gateway's wrapped response

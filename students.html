@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Hub</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- JS -->
+  <script src="js/students.js" defer></script>
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #003366;
+    }
+
+    .navbar {
+      padding: 10px 20px;
+    }
+
+    section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .table th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-brand h1 {
+        font-size: 1.4rem;
+      }
+
+      img {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg" style="background-color: #7dc1f2;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <h1>Student Hub</h1>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="#welcome" class="nav-link">Welcome</a></li>
+              <li class="nav-item"><a href="#search" class="nav-link">Search</a></li>
+              <li class="nav-item"><a href="#student-list" class="nav-link">Management</a></li>
+              <li class="nav-item"><a href="#new" class="nav-link">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="text-center bg-light">
+      <div class="container">
+        <h1 class="mb-4">Welcome to the Student Management Hub</h1>
+
+        <p class="lead w-75 mx-auto">
+          Easily browse, register, and manage students in our academic system.
+          This platform ensures simple and efficient access to student records.
+        </p>
+
+        <div class="row g-4">
+          <!-- Learning Card -->
+          <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+              <div class="card-body text-center">
+                <h5 class="card-title"><i class="bi bi-lightbulb"></i> Learning & Discovery</h5>
+                <p class="card-text">
+                  Students explore new ideas, solve challenges, and develop their knowledge across multiple disciplines.
+                  Every class is a chance to learn, question, and innovate.
+                </p>
+                <img
+                  src="https://news.mit.edu/sites/default/files/images/202403/MIT-SchoolQuality-01.jpg"
+                  alt="Students learning" class="img-fluid w-75 mt-3 rounded shadow-sm">
+              </div>
+            </div>
+          </div>
+
+          <!-- Collaboration Card -->
+          <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+              <div class="card-body text-center">
+                <h5 class="card-title"><i class="bi bi-people"></i> Collaboration & Teamwork</h5>
+                <p class="card-text">
+                  Working together on projects and group discussions, students share perspectives,
+                  learn from one another, and build strong communication and leadership skills.
+                </p>
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/554b8150e4b01cb58c517c75/1726074926880-VG56O3XRWWJDUS9OX2DB/image-asset.jpeg"
+                  alt="Students collaborating" class="img-fluid w-75 mt-3 rounded shadow-sm">
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth & Achievement Card -->
+          <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+              <div class="card-body text-center">
+                <h5 class="card-title"><i class="bi bi-rocket"></i> Growth & Achievement</h5>
+                <p class="card-text">
+                  Through dedication and effort, students reach new milestones,
+                  present their work, and take pride in the progress they’ve made along their academic journey.
+                </p>
+                <img
+                  src="https://www.thoughtco.com/thmb/SCBLwY2p-iEr2Fq30tD-wNyj424=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/in-the-classroom-multi-ethnic-students-listening-to-a-lecturer-and-writing-in-notebooks--smart-young-people-study-at-the-college--962475722-5c76f411c9e77c0001f57b64.jpg"
+                  alt="Students achieving goals" class="img-fluid w-75 mt-3 rounded shadow-sm">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="text-center bg-white">
+      <div class="container">
+        <h1 class="mb-4">Search for a Student</h1>
+        <p class="mb-4">
+          The Search section enables users to quickly find a specific student by name. Enter a full or partial name to
+          retrieve key details about any registered student in the system.
+        </p>
+        <img
+          src="https://png.pngtree.com/thumb_back/fh260/background/20220804/pngtree-young-man-in-library-thinking-and-writing-thoughtful-male-university-photo-image_47932796.jpg"
+          alt="Student search" class="img-fluid w-75 mb-4 rounded shadow-sm">
+        <form class="d-flex justify-content-center mb-3">
+          <input class="form-control w-50 me-2" id="search_name" placeholder="Enter student name..." required>
+          <input class="form-control w-50 me-2" id="search_last_name" placeholder="Enter student last name..." required>
+          <button class="btn btn-primary" onclick="search()"><i class="bi bi-search"></i> Search</button>
+        </form>
+        <div id="student_found"></div>
+      </div>
+    </section>
+
+    <!-- Management Section -->
+    <section id="student-list" class="text-center bg-light">
+      <div class="container">
+        <h1 class="mb-4">Student Management</h1>
+        <p class="mb-4">
+          This section provides an overview of all registered students, showing their essential information
+          such as name, email, and course. Administrators can use this interface to view, edit, or remove
+          records with ease, maintaining an organized student database.
+        </p>
+        <img
+          src="https://www.psychologicalscience.org/redesign/wp-content/uploads/2011/04/ThinkstockPhotos-504382222-1024x683.jpg"
+          alt="Students list" class="img-fluid w-75 mb-4 rounded shadow-sm">
+        <!-- Table Placeholder -->
+        <div id="table-container"></div>
+      </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="new" class="bg-white">
+      <div class="container">
+        <h1 class="text-center mb-4">Register New Student</h1>
+        <img
+          src="https://media.istockphoto.com/id/670415178/photo/we-all-know-the-answer.jpg?s=612x612&w=0&k=20&c=E44jkeSLuR4u1wP0YCYAy0wSvcf9GUzf19wEc5oOjHY="
+          alt="Student registration" class="img-fluid w-75 d-block mx-auto mb-4 rounded shadow-sm">
+        <p class="text-center mb-4">
+          Add new students by entering their personal and academic details.
+          This section streamlines enrollment and ensures accurate database records.
+        </p>
+        <form id="studentForm">
+    <input type="text" class="form-control mb-3" id="name" placeholder="Name" required>
+    <input type="text" class="form-control mb-3" id="surname" placeholder="Surname" required>
+    <input type="number" class="form-control mb-3" id="age" placeholder="Age" required>
+    <input type="email" class="form-control mb-3" id="email" placeholder="Email" required>
+
+    <!-- School Dropdown -->
+    <select class="form-select mb-3" id="school" required>
+        <option value="" disabled selected>Select School</option>
+    </select>
+
+    <!-- Course Dropdown -->
+    <select class="form-select mb-3" id="course" required>
+        <option value="" disabled selected>Select Course</option>
+    </select>
+
+    <div class="text-end">
+        <button type="submit" class="btn btn-success" onclick="add()"><i class="bi bi-check-circle"></i> Save</button>
+    </div>
+</form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      &copy; 2025 Metaphorce | Inspired by Campus Co | Built with ❤️ and Bootstrap
+    </footer>
+  </main>
+
+  <!-- Simple Form Alert JS -->
+  <script>
+    document.getElementById("studentForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const alertBox = document.getElementById("formAlert");
+      alertBox.classList.remove("d-none");
+      setTimeout(() => alertBox.classList.add("d-none"), 3000);
+    });
+  </script>
+</body>
+
+</html>
