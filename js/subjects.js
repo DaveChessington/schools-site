@@ -1,10 +1,12 @@
 api_gateway="https://1zow4wws27.execute-api.us-east-1.amazonaws.com"
 
 async function add() {
+    debugger;
+    alert("Adding subject...");
     let mensaje = ""; // Declare 'mensaje' outside the try block
 
     try{
-        debugger;
+        
         const name = document.getElementById('subject_name').value;
         const description = document.getElementById('description').value;
         const response = await fetch(`${api_gateway}/dev/subjects`, {
@@ -27,7 +29,7 @@ async function add() {
 
 async function search() {
     let mensaje = "";
-
+    debugger;
     try {
         const subject_name = document.getElementById('search_subject').value.trim();
 

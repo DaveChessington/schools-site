@@ -95,7 +95,7 @@
           alt="Search Illustration" class="img-fluid w-75 mb-4 rounded">
         <form class="d-flex justify-content-center mb-3">
           <input class="form-control w-50 me-2" placeholder="Enter a subject name..." id="search_subject" required>
-          <button class="btn btn-primary" onclick="search()"><i class="bi bi-search"></i> Search</button>
+          <button type="button" class="btn btn-primary" onclick="search()"><i class="bi bi-search"></i> Search</button>
         </form>
         <div id="subject_found"></div>
         <p class="text-muted">Tip: Try searching for “Mathematics”, “Biology”, or “History”.</p>
@@ -152,7 +152,7 @@
             <input class="form-control mb-3" placeholder="Subject Name" id="subject_name" required>
             <textarea class="form-control mb-3" rows="4" id="description" placeholder="Subject Description"
               required></textarea>
-            <button class="btn btn-success" onclick="add()"><i class="bi bi-plus-circle"></i> Create Subject</button>
+            <button type="button" class="btn btn-success" onclick="add()"><i class="bi bi-plus-circle"></i> Create Subject</button>
           </form>
         </div>
         <div class="col-md-6 text-center">
