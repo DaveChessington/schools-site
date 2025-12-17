@@ -1,39 +1,43 @@
-api_gateway="https://1zow4wws27.execute-api.us-east-1.amazonaws.com"
+api_gateway = "https://1zow4wws27.execute-api.us-east-1.amazonaws.com"
 
-async function search(){
+async function search() {
+    debugger;
     let mensaje = ""; // Declare 'mensaje' outside the try block
 
-    try{
-        debugger;
+    try {
+
         const student_name = document.getElementById('search_name').value;
         const student_last_name = document.getElementById('search_last_name').value;
         debugger;
         const response = await fetch(`${api_gateway}/dev/students/student`, {
-            method: 'POST', 
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({"name": student_name, "last_name": student_last_name}) 
+            body: JSON.stringify({ "name": student_name, "last_name": student_last_name })
         });
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const body= await response.json();
-        data=JSON.parse(body.body);
+        const body = await response.json();
+        data = JSON.parse(body.body);
 
-        if (data.exists){
+        if (data.exists) {
             mensaje = `Success: fetched data`;
             //debugger;
-            document.getElementById('student_found').innerText =`id:${data.student.id} \nname: ${data.student.name} ${data.student.last_name} \nCourse: ${data.student.courses[0]} \nage: ${data.student.age} \nschool: ${data.student.school}`;
+            console.log("Student object:", data.student);
+            console.log("Courses:", data.student?.courses);
+
+            document.getElementById('student_found').innerText = `id:${data.student[0].id} \nname: ${data.student[0].name} ${data.student[0].last_name} \nCourse: ${data.student[0].courses[0]} \nage: ${data.student[0].age} \nschool: ${data.student[0].school}`;
         }
-        else{
+        else {
             mensaje = 'student not Found';
         }
 
     }
-    catch(e){
+    catch (e) {
         mensaje = `Error: ${e.message}`; // Access the error message for cleaner output
     }
 
@@ -42,10 +46,11 @@ async function search(){
 
 
 async function add() {
+    debugger;
     let mensaje = "";
 
     try {
-        debugger;
+
         const name = document.getElementById('name').value.trim();
         const last_name = document.getElementById('surname').value.trim();
         const age = document.getElementById('age').value.trim();
@@ -63,7 +68,7 @@ async function add() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({name, last_name, age, email, school, courses: [course]})
+            body: JSON.stringify({ name, last_name, age, email, school, courses: [course] })
         });
 
         if (!response.ok) {
@@ -181,7 +186,7 @@ async function loadCourses() {
 
 // Call these on page load
 document.addEventListener("DOMContentLoaded", () => {
-   // listStudents();  // existing function
+    // listStudents();  // existing function
     loadSchools();
     loadCourses();
 });
